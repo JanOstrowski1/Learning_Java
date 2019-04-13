@@ -47,7 +47,7 @@ public class LoadingData {
     }
 
     public CryptoCurrency gettingDateFromUserAndReturningCryptoCurrencyFromThatDate(String csv) throws FileNotFoundException {
-        boolean flag = false;
+        boolean dateCapturedCorrectly = false;
         CryptoCurrency cryptoCurrency = new CryptoCurrency();
         File file = new File(csv);
         String lineOfText = null;
@@ -60,11 +60,11 @@ public class LoadingData {
                 lineOfText = inputStream.next();
                 cryptoCurrency = sortingLineOfText(lineOfText);
                 if ((cryptoCurrency.getDate().equals(date))) {
-                    flag = true;
+                    dateCapturedCorrectly = true;
                     break;
                 }
             }
-                if (!flag) {
+                if (!dateCapturedCorrectly) {
 //                Inteface.emptySpacer(); // <<-ODKOMENTOWAć !
                     System.out.println("----------------------------------------------------------------");
                     System.out.println("    Incorrect date format, or date out of range. Try again!");
