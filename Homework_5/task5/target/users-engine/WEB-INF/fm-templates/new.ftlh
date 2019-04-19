@@ -5,8 +5,8 @@
 </head>
 <body>
 <h1> <strong>${name}</strong></h1>
-<h1> <strong>${group}</strong></h1>
-<#--<h1> <strong>${.now?string.yyyy-MM-dd}</strong></h1>-->
+<h2> <strong>${group}</strong></h2>
+<h2> <strong>${time}</strong></h2>
 
 </body>
 </html>
