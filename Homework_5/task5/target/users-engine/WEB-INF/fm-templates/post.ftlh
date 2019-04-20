@@ -12,7 +12,7 @@
     <input type="text" name="p2"><br>
     Parametr 3:
     <input type="text" name="p3"><br>
-    <input type="text" name="p3"><br>
+    Parametr 3:
     <input type="text" name="p3"><br>
     <input type="submit" value="Wyslij">
 </form>

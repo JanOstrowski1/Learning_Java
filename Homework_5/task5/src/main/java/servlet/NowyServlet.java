@@ -15,13 +15,14 @@ import java.io.IOException;
 @WebServlet("nowy")
 public class NowyServlet extends HttpServlet {
     @Inject
-    TemplateProvider templateProvider ;
+    TemplateProvider templateProvider;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        Template template = templateProvider.getTemplate(getServletContext(),"post.ftlh");
+        Template template = templateProvider.getTemplate(getServletContext(), "post.ftlh");
         try {
-            template.process(null,resp.getWriter());
+            template.process(null, resp.getWriter());
         } catch (TemplateException e) {
             e.printStackTrace();
         }
