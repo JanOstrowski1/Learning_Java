@@ -45,6 +45,9 @@ public class GradeService {
             String string = decimalFormat.format(average);
             newData[i][1] = string.replace(',', '.');
         }
+        for (int i = 0; i <newData.length ; i++) {
+            System.out.println(newData[i][0]+" "+newData[i][1]);
+        }
         return newData;
     }
 }
