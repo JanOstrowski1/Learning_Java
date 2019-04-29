@@ -1,7 +1,6 @@
 package servlet;
 
-
-import freemarker.TemplateProvider;
+import config.TemplateProvider;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
@@ -13,22 +12,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/aplikacja")
-public class FibonacciServlet extends HttpServlet {
+@WebServlet("nowy")
+public class NowyServlet extends HttpServlet {
     @Inject
     TemplateProvider templateProvider;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        Template template = templateProvider.getTemplate(getServletContext(),"form.ftlh");
-
+        Template template = templateProvider.getTemplate(getServletContext(), "post.ftlh");
         try {
-            template.process(null,resp.getWriter());
+            template.process(null, resp.getWriter());
         } catch (TemplateException e) {
             e.printStackTrace();
         }
     }
-
-
 }
