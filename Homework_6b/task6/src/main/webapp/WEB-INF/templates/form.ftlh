@@ -22,12 +22,6 @@
             position: relative;
             background-color:slateblue;
         }
-        .btn{
-            background-color: red;
-            color: greenyellow;
-            position: absolute;
-            bottom: 0;
-        }
     </style>
 </head>
 <body>
@@ -43,7 +37,7 @@
         <br>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">Oblicz !</button>
+                <input class="btn btn-primary" type="submit" value="Oblicz">
             </div>
         </div>
     </form>
