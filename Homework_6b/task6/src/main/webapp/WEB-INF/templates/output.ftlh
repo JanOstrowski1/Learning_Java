@@ -43,7 +43,7 @@
             </tr>
             <#list sequence as item>
             <tr>
-                     <th>&nbsp;&nbsp; n = ${item?index+1} </th>
+                     <th>&nbsp;&nbsp;&nbsp;n = ${item?index+1} </th>
                     <th> &nbsp;&nbsp;${item} </th>
             </tr>
             </#list>
